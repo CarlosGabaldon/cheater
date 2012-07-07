@@ -1,0 +1,144 @@
+ -
+  group: GIT CREATE COMMANDS
+  commands:
+    -
+      command: git clone ssh://user@domain.com/repo.git
+      desc: Clone an existing repository
+    -
+      command: git init 
+      desc: Create a new local repository
+ -
+  group: GIT LOCAL CHANGES COMMANDS
+  commands:
+    -
+      command: git status
+      desc: Changed files in your working directory
+    -
+      command: git diff
+      desc: Changes to tracked files
+    -
+      command: git add 
+      desc: Add all current changes to the next commit
+    -
+      command: git add -p <file>
+      desc: Add some changes in <file> to the next commit
+    -
+      command: git commit - a
+      desc: Commit all local changes in tracked files
+    -
+      command: git commit
+      desc: Commit previously staged changes
+    -
+      command: git commit --amend
+      desc: Change the last commit
+    
+ -
+  group: GIT COMMIT HISTORY COMMANDS
+  commands:
+    -
+      command: git log
+      desc: Show all commits starting with newest
+    -
+      command: git log -p <file>
+      desc: Show changes over time for a specific file
+    -
+      command: git blame <file>
+      desc: Who changed what and when in <file>
+    
+ -
+  group: GIT BRANCHES & TAGS COMMANDS
+  commands: 
+    -
+      command: git branch
+      desc: List all existing branches
+    -
+      command: git checkout <branch>
+      desc: Switch HEAD branch
+    -
+      command: git checkout -b <branch>
+      desc: Create topic branch
+    -
+      command: git branch <new-branch>
+      desc: Create new branch based on your current HEAD
+    -
+      command: git branch --track <new-branch> <remote-branch>
+      desc: Create a new tracking branch based on remote branch
+    -
+      command: git branch -d <branch>
+      desc: Delete a loacl branch
+    -
+      command: git tag <tag-name>
+      desc: Mark the current commit with a tag
+ -
+  group: GIT UPDATE & PUBLISH COMMANDS
+  commands:
+    -
+      command: git remote -v
+      desc: List all currently configured remotes
+    -
+      command: git remote show <remote>
+      desc: Show information about a remote
+    -
+      command: git remote add <remote> url
+      desc: Add new remote repository name <remote>
+    -
+      command: git fetch <remote>
+      desc: Download all changes from <remote>, but do not integrate into HEAD
+    -
+      command: git pull <remote> <branch>
+      desc: Download changes and directly merge/integrate into HEAD
+    -
+      command: git push <remote> <branch>
+      desc: Publish local changes on a remote
+    -
+      command: git push <remote> :<branch>
+      desc: Delete a branch on the remote
+    -
+      command: git push --tags
+      desc: Publish tags
+      
+ - 
+   group: GIT MERGE & REBASE COMMANDS
+   commands:
+      -
+        command: git merge <branch>
+        desc: Merge <branch> into your current HEAD
+      - 
+        command: git rebase <branch>
+        desc: Rebase current HEAD onto <branch>
+      -
+        command: git rebase --abort
+        desc: Abort a rebase
+      -
+        command: git rebase --continue
+        desc: Continue a rebase after resolving conflicts
+      -
+        command: git mergetool
+        desc: Use configured merge tool to solve conflicts
+      -
+        command: git add <resolved-file>
+        desc: Use editor to manually solve conflicts and mark file as resolved
+      - 
+        command: git rm <resolved-file>
+        desc: Use editor to manually solve conflicts and marke file as resolved
+ -
+    group: GIT UNDO COMMANDS
+    commands:
+      -
+        command: git reset --hard HEAD
+        desc: Discard all local changes in your working directory
+      -
+        command: git checkout HEAD <file>
+        desc: Discard local changes in a specific file
+      -
+        command: git revert <commit>
+        desc: Revert a commit (by producing a new commit with contrary changes)
+      - 
+        command: git reset --hard <commit>
+        desc: Reset HEAD pointer to a previous commit and discard all changes since then
+      - 
+        command: git reset <commit>
+        desc: Reset HEAD pointer to a previous commit and preserve all changes as unstaged changes
+      - 
+        command: git reset --keep <commit>
+        desc: Reset HEAD pointer to a previous commit and preserve uncommitted local changes 

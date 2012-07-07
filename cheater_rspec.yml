@@ -1,0 +1,58 @@
+-
+  group: RSpec::Expectations Equivalence
+  commands:
+    -
+      command: actual.should eq(expected)
+      desc: Passes if actual object == expected object
+    -
+      command: actual.should == expected
+      desc: Passes if actual object == expected object
+    -
+      command: actual.should eql(expected)
+      desc: Passes if actual.eql?(expected)
+-
+  group: RSpec::Expectations Identity
+  commands:
+    -
+      command: actual.should be(expected)
+      desc: Passes if actual.equal?(expected)
+    -
+      command: actual.should equal(expected)
+      desc: Passes if actual.equal?(expected)
+-
+  group: RSpec::Expectations Comparisons
+  commands:
+    -
+      command: actual.should be > expected
+      desc: Passes if actual is greater than expected
+    -
+      command: actual.should be >= expected
+      desc: Passes if actual is greater than or equal to expected
+    -
+      command: actual.should be <= expected
+      desc: Passes if actual is less than or equal to expected
+    -
+      command: actual.should be < expected
+      desc: Passes if actual is less than expected      
+    -
+      command: actual.should be_within(delta).of(expected)
+      desc: Passes if actual within delta of expected, use for floating point values. i.e. areaofcircle.should be_within(0.1).of(28.3)
+-
+  group: RSpec::Expectations Regular expressions
+  commands:
+    -
+      command: actual.should =~ /expression/
+      desc: Passes if actual matches expression
+    -
+      command: actual.should match(/expression/)
+      desc: Passes if actual matches expression
+-
+  group: RSpec::Expectations Types/classes
+  commands:
+    -
+      command: actual.should be_an_instance_of(expected)
+      desc: Passes if actual is an instance of the expected class
+    -
+      command: actual.should be_a_kind_of(expected)
+      desc: Passes if actual is a type of the expected
+     
