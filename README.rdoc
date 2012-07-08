@@ -18,10 +18,10 @@
   
 === GEMS
   $ sudo gem install bundler
-  $ bundle install
   
 == Use
   $ git clone https://github.com/CarlosGabaldon/cheater.git
   $ cd ./cheater
+  $ bundle install
   $ rake cheater:docs #list of Available Cheet Sheets
   $ rake cheater:git #display the Git cheat sheet
