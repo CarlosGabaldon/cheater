@@ -19,7 +19,7 @@
 === GEMS
   $ sudo gem install bundler
   
-== Use
+=== Use
   $ git clone https://github.com/CarlosGabaldon/cheater.git
   $ cd ./cheater
   $ bundle install
