@@ -1,0 +1,93 @@
+ -
+  group: CAPYBARA Navigating
+  commands:
+   -
+     command: visit('/projects')
+     desc: Navigates to given path
+   -
+     command: visit(post_comments_path(post))
+     desc: Navigates to given path; named route
+   -
+     command: current_path
+     desc: Path of the current page, without any domain information; i.e. current_path.should == post_comments_path(post)
+ -
+  group: CAPYBARA Clicking links and buttons
+  commands:
+    -
+      command: click_link('id-of-link')
+      desc: Clicks link based on id of the anchor
+    -
+      command: click_link('Link Text')
+      desc: Clicks link based on the text of the anchor
+    -
+      command: click_button('Save')
+      desc: Clicks the button based on the text
+    - 
+      command: click_on('Link Text')
+      desc: Clicks on either links or buttons
+ -
+   group: CAPYBARA Interacting with forms
+   commands:
+     -
+       command: fill_in('First Name', :with => 'John')
+       desc: Find a text field or text area and fill it in with the given text, using name, id or label text
+     -
+       command: choose('A Radio Button')
+       desc: Find a radio button and mark it as checked. The radio button can be found via name, id or label text
+     -
+       command: check('A Checkbox')
+       desc: Find a check box and mark it as checked. The check box can be found via name, id or label text
+     -
+       command: uncheck('A Checkbox')
+       desc: Find a check box and mark uncheck it. The check box can be found via name, id or label text
+     -
+       command: attach_file('Image', '/path/to/image.jpg')
+       desc: Find a file field on the page and attach a file given its path. 
+     -
+       command: select('Option', :from => 'Select Box')
+       desc: Find a select box on the page and select a particular option from it. 
+ - 
+   group: CAPYBARA Querying
+   commands:
+     -
+       command: page.has_selector?('table tr')
+       desc: Query page for the existence of selector elements
+     -
+       command: page.should have_no_selector(:content)
+       desc: Query page the lack of existence of the content
+     - 
+       command: page.should have_xpath('//table/tr')
+       desc: Query page for content using xpath
+     -
+       command: page.should have_css('table tr.foo')
+       desc: Query page for content using css selector
+     - 
+       command: page.should have_content('foo')
+       desc: Query page for existence of the content string
+ - 
+    group: CAPYBARA Finding elements to manipulate
+    commands:
+      -
+        command: find_field('First Name').value
+        desc: Find a form field on the page. The field can be found by its name, id or label text
+      -
+        command: find_link('Hello').visible?
+        desc: Find a link on the page. The link can be found by its id or text
+      - 
+        command: find_button('Send').click
+        desc: Find a button on the page. The link can be found by its id, name or value
+      -
+        command: find("#overlay").find("h1").click
+        desc: Find an Element based on the given arguments. find will raise an error if the element is not found.
+      - 
+        command: all('a').each { |a| a[:href] }
+        desc: Find all Elements based on the given arguments     
+ -
+      group: CAPYBARA Debugging
+      commands:
+        -
+          command: save_and_open_page
+          desc: Takes a snapshot of the page as it currently is for review
+        -
+          command: print page.html
+          desc: Retrieves the current state of the DOM as a string using page.html

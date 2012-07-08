@@ -55,4 +55,55 @@
     -
       command: actual.should be_a_kind_of(expected)
       desc: Passes if actual is a type of the expected
+-
+  group: RSpec::Expectations Truthiness
+  commands:
+    -
+      command: actual.should be_true 
+      desc: Passes if actual is truthy (not nil or false)
+    -
+      command: actual.should be_false 
+      desc: Passes if actual is falsy (nil or false)
+    -
+      command: actual.should be_nil 
+      desc: Passes if actual is nil
+-
+  group: RSpec::Expectations Expecting errors
+  commands:
+    -
+      command: expect { ... }.to raise_error
+      desc: Expects error 
+    -
+      command: expect { ... }.to raise_error(ErrorClass)
+      desc: Expects error 
+    -
+      command: expect { ... }.to raise_error("message")
+      desc: Expects error 
+    -
+      command: expect { ... }.to raise_error(ErrorClass, "message")
+      desc: Expects error 
+-
+  group: RSpec::Expectations Expecting throws
+  commands:
+    -
+      command: expect { ... }.to throw_symbol
+      desc: Expects thow 
+    -
+      command: expect { ... }.to throw_symbol(:symbol)
+      desc: Expects thow 
+    -
+      command: expect { ... }.to throw_symbol(:symbol, 'value')
+      desc: Expects thow 
+- 
+  group: RSpec::Expectations Collection membership
+  commands:
+    -
+      command: actual.should include(expected)
+      desc: Passes if actual includes expected value; [1,2,3].should include(1, 2)
+    - 
+      command: actual.should start_with(expected)
+      desc: Passes if actual starts with expected value; [1,2,3].should start_with(1)
+    - 
+      command: actual.should end_with(expected)
+      desc: Passes if actual ends with expected value; [1,2,3].should end_with(3)
      
