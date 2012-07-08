@@ -142,3 +142,14 @@
       - 
         command: git reset --keep <commit>
         desc: Reset HEAD pointer to a previous commit and preserve uncommitted local changes 
+        
+ -
+    group: GIT CHANGING REMOTE URL
+    commands:
+      -
+        command: git remote -v
+        desc: View existing remotes
+      -
+        command: git remote set-url origin https://github.com/user/repo2.git
+        desc: Change the 'origin' remote's URL
+        
