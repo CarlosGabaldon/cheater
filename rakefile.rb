@@ -10,7 +10,7 @@ namespace :cheater do
   
   task :docs do
     files = Dir.glob("*.yml")
-    puts "Available Cheet Sheets"
+    puts "Available Cheat Sheets"
     files.each do |file|
       command = "rake #{file.gsub(/.yml/, '').tr('_', ':')}"
       desc = "Cheat Sheet for #{command.gsub(/rake cheater:/, '')}"

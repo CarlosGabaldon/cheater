@@ -1,0 +1,21 @@
+= Cheater
+
+=== What is cheater?
+
+   Simple Rake based tool for looking up cheat sheets for common code & console commands.
+
+  Copyright (c) 2012 Carlos Gabaldon <carlosgabaldon.com>, Yellow Shovel, LLC <yellowshovel.com>
+
+
+== SETUP
+  
+=== RUBY w/ RVM
+  $ bash -s stable < <(curl -s https://raw.github.com/wayneeseguin/rvm/master/binscripts/rvm-installer)
+  $ source ~/.bash_profile
+  $ rvm requirements
+  $ rvm install ruby-1.9.3 --with-openssl-dir=/opt/local --with-iconv-dir=$rvm_path/usr
+  $ rvm use ruby-1.9.3-p0 --default
+  
+=== GEMS
+  $ sudo gem install bundler
+  $ bundle install
