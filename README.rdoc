@@ -4,7 +4,7 @@
 
    Simple Rake based tool for looking up cheat sheets for common code & console commands.
 
-  Copyright (c) 2012 Carlos Gabaldon <carlosgabaldon.com>, Yellow Shovel, LLC <yellowshovel.com>
+   Copyright (c) 2012 Carlos Gabaldon <carlosgabaldon.com>, Yellow Shovel, LLC <yellowshovel.com>
 
 
 == SETUP
@@ -19,3 +19,9 @@
 === GEMS
   $ sudo gem install bundler
   $ bundle install
+  
+== Use
+  $ git clone https://github.com/CarlosGabaldon/cheater.git
+  $ cd ./cheater
+  $ rake cheater:docs #list of Available Cheet Sheets
+  $ rake cheater:git #display the Git cheat sheet
