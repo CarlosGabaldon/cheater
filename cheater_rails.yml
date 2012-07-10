@@ -1,0 +1,78 @@
+ -
+  group: RAILS COMMAND LINE
+  commands:
+    -
+      command: rails new <app_name>
+      desc: Create a new Rails application
+    -
+      command: rails s -e production -p 4000
+      desc: Launches configure web server (default WEBrick); option -e or -p
+    -
+      command: rails g
+      desc: Lists generators 
+    -
+      command: rails g <generator> -h
+      desc: Displays generator's options and usage
+    -
+      command: rails c
+      desc: Launches Rails application console; to not change data use; rails c --sandbox
+    -
+      command: rails db
+      desc: Drops into default databse command line interface
+    -
+      command: rails r "Model.long_running_method"
+      desc: Runs Ruby code in the context of Rails non-interactively
+    -
+      command: rails d model <name>
+      desc: Destroys generated model files; rails d will list generators
+    -
+      command: rails d controller <name>
+      desc: Destroys generated model files; rails d; will list generators
+ -
+  group: RAKE COMMANDS
+  commands:
+    -
+      command: rake -T
+      desc: List available rake tasks
+    -
+      command: rake about
+      desc: Provides information about version numbers for Ruby, RubyGems, Rails, etc
+    -
+      command: rake db:migrate db:test:prepare 
+      desc: Migrates the development and test databases
+    -
+      command: rake db:test:clone
+      desc: Recreate the test database from the current environment’s database schema
+    -
+      command: rake db:test:clone_structure
+      desc: Recreate the test database from the development structure
+    -
+      command: rake db:test:load
+      desc: Recreate the test database from the current schema.rb
+    -
+      command: rake db:test:prepare
+      desc: Check for pending migrations and load the test schema
+    -
+      command: rake db:test:purge
+      desc: Empty the test database
+    -
+      command: rake stats
+      desc: Statistics on code, displaying things like KLOCs 
+    -
+      command: rake routes
+      desc: List all defined routes
+    -
+      command: rake tmp:cache:clear
+      desc: Clears tmp/cache
+    -
+      command: rake tmp:sessions:clear
+      desc: Clears tmp/sessions
+    -
+      command: rake tmp:sockets:clear
+      desc: Clears tmp/sockets
+    -
+      command: rake tmp:clear
+      desc: Clears all the three cache, sessions and sockets
+    -
+      command: rake stats
+      desc: Statistics on code, displaying things like KLOCs 
