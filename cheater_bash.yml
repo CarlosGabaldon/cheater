@@ -1,0 +1,22 @@
+ -
+  group: BASH COMMON COMMANDS
+  commands:
+    -
+      command: grep [options] PATTERN [FILE]
+      desc: Search file(s) for specific text; i.e. grep "controller" ~/ProjectsNew/cheater/*
+    -
+      command: tail [options] [FILE]
+      desc: Output the last 10 lines by default of each FILE; i.e. tail -20 ~/ProjectsNew/kanban-mail/log/development.log 
+    -
+      command: ps -e
+      desc: List every process on the system
+    -
+      command: kill -9 PID
+      desc: Stops a process from running; -9 will ensure "execution"
+    -
+      command: cp [options] Source Dest
+      desc: Copies SOURCE to DEST; i.e. cp -r ~/ProjectsNew/cheater/stuff/ ~/ProjectsNew/cheater/morejunk
+    -
+      command: curl [options] URL
+      desc: Transfer URL; i.e. curl -i https://api.github.com/repos/CarlosGabaldon/fossa-old/issues; curl -i https://api.github.com/repos/CarlosGabaldon/fossa-old/issues > issues.json 
+   
