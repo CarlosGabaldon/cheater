@@ -1,0 +1,30 @@
+ -
+  group: TextMate commands
+  commands:
+    -
+      command: shift + ctrl + <down arrow>
+      desc: Spotlight display of all open TextMate windows and recently opened projects
+    -
+      command: alt-dragging mouse
+      desc: Selects vertical block of text for cut/copy/paste or edit
+    -
+      command: ctrl + cmd + T
+      desc: Finds command; snippet or macro from a bundle
+    -
+      command: cmd + T
+      desc: Go to file
+    -
+      command: shift + cmd + T
+      desc: Go to symbol in current file
+    -
+      command: alt + cmd + ]
+      desc: Aligns consecutive assignments; by placing cursor on one of the lines and pressing alt+cmd+]
+    -
+      command: ctrl + shift + D
+      desc: Duplicates line or selection
+    -
+      command: alt + cmd + <down arrow>
+      desc: Goes to related file
+    -
+      command: ctrl + s
+      desc: Incremental search; status bar turns into search box

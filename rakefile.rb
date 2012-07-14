@@ -1,7 +1,7 @@
 require 'yaml'
 
 def p command, description
-  puts " #{command} # #{description}."
+  puts " #{command} #=> #{description}."
 end
 
 namespace :cheater do
