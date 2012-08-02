@@ -69,6 +69,9 @@
     -
       command: git tag <tag-name>
       desc: Mark the current commit with a tag
+    -
+      command: git diff --name-only master <branch>
+      desc: Git a list of files that changed on the branch
  -
   group: GIT UPDATE & PUBLISH COMMANDS
   commands:
