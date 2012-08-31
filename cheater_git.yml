@@ -65,7 +65,10 @@
       desc: Create a new tracking branch based on remote branch
     -
       command: git branch -d <branch>
-      desc: Delete a loacl branch
+      desc: Delete a local branch
+    -
+      command: git push origin :<branch>
+      desc: Delete a remote branch
     -
       command: git tag <tag-name>
       desc: Mark the current commit with a tag
