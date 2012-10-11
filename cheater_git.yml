@@ -112,6 +112,9 @@
       - 
         command: git rebase <branch>
         desc: Rebase current HEAD onto <branch>
+      -  
+        command: git rebase -i HEAD~<number-of-commits>
+        desc: Squashing commits
       -
         command: git rebase --abort
         desc: Abort a rebase

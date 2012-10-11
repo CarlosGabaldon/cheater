@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="eba70b7c-005a-4176-9425-362c046c2f6d" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cheater_git.yml" afterPath="$PROJECT_DIR$/cheater_git.yml" />
-    </list>
+    <list default="true" id="eba70b7c-005a-4176-9425-362c046c2f6d" name="Default" comment="" />
     <ignored path="cheater.iws" />
     <ignored path=".idea/workspace.xml" />
     <option name="TRACKING_ENABLED" value="true" />
